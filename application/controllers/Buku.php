@@ -109,6 +109,7 @@ class Buku extends CI_Controller
                 'image' => $gambar
             ];
             $this->ModelBuku->simpanBuku($data);
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Buku Berhasil Ditambahkan</div>');
             redirect('buku');
         }
     }
